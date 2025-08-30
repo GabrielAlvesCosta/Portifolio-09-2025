@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link href="./Estrelas do Amanhã.css" rel="stylesheet">
+<title>Estrelas do Amanhã</title>
+</head>
+<body>
+<img src="aula.png" alt="4 crianças e uma adulta em aula" class="aula"><br><br><br>
+<a href="javascript:history.back()"><img src="./voltar.png" class="voltar"></a><br><br><br><br>
+<img src="fdm.png" class="img"><br><br><br><br><br>
+<img src="idc.png" class="img"><br><br>
+<img src="nc.png" class="img"><br>
+<input name="nome" type="text" placeholder="Qual o nome da criança?" class="normal" required><br><br><br>
+<img src="ddn.png" class="img"><br>
+<input type="date" id="nascimento" name="nascimento" class="normal" required><br><br><br>
+<img src="s.png" class="img"><br>
+<select id="sexo" name="sexo" class="normal" required>
+<option value="Masculino" required>Masculino</option>
+<option value="Feminino" required>Feminino</option></select><br><br><br>
+<img src="im.png" class="img"><br>
+<textarea id="imedica" name="imedica" rows="10" cols="57" placeholder="Ela tem alergia a glúten" required></textarea><br><br><br><br><img src="cdn.png"><br>
+
+<label for="fileUpload" class="upload-label"></label>
+<input type="file" id="fileUpload" accept="image/*" required>
+<img id="preview" width="150" style="display:none; margin-top:10px;">
+<script>
+document.getElementById('fileUpload').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      const preview = document.getElementById('preview');
+      preview.src = ev.target.result;
+      preview.style.display = 'block';
+    }
+    reader.readAsDataURL(file);
+  }
+});
+</script><br><br><br><br>
+
+<img src="er.png" class="img"><br><br><br>
+<img src="cep.png" class="img"><br>
+<input name="cep" type="number" pattern=".{8,8}" placeholder="01234-567" class="normal" required><br><br><br>
+<img src="rua.png" class="img"><br>
+<input name="rua" type="text" placeholder="Rua das Flores" class="normal" required><br><br><br>
+<img src="numero.png" class="img"><br>
+<input type="number" name="numero" placeholder="123" class="normal" required><br><br><br>
+<img src="cidade.png" class="img"><br>
+<input name="cidade" type="text" placeholder="São Paulo" class="normal" required><br><br><br>
+<img src="estado.png" class="img"><br>
+<input name="estado" type="text" placeholder="SP" class="normal" required><br><br><br><br><br>
+<img src="idr.png" class="img"><br><br><br>
+<img src="ndr.png" class="img"><br>
+<input name="responsavel" type="text" placeholder="Miguel Roberto Alves" class="normal" required><br>
+<img src="prlecde.png" class="img"><br><br><br>
+<img src="telefone.png" class="img"><br>
+<input type="number" id="telefone" name="telefone" pattern=".{11,11}" placeholder="(10) 9 8765-4321" class="normal" required><br><br><br>
+<img src="email.png" class="img"><br>
+<input type="email" id="email" name="email" placeholder="papailegal123" class="normal" required><br><br><br><br>
+<img src="odm.png" class="img"><br><br><br>
+<img src="tde.png" class="img"><br><br>
+<input type="radio" name="turno" id="manha" class="radio-card" required> <label for="manha" class="radio-label"><img src="manha.png" alt="Manhã"></label>
+<input type="radio" name="turno" id="tarde" class="radio-card" required><label for="tarde" class="radio-label"><img src="tarde.png" alt="Tarde"></label><br><br>
+<img src="inscricao.png" class="img"><br><br>
+<input type="checkbox" id="futebol" class="card-checkbox"><label for="futebol" class="card-label"><img src="futebol.png" alt="Futebol"></label>
+<input type="checkbox" id="basquete" class="card-checkbox"><label for="basquete" class="card-label"><img src="basquete.png" alt="Basquete"></label><br><br><br>
+<input type="checkbox" id="natacao" class="card-checkbox"><label for="natacao" class="card-label"><img src="natacao.png" alt="Natação"></label>
+<input type="checkbox" id="yoga" class="card-checkbox"><label for="yoga" class="card-label"><img src="yoga.png" alt="yoga"></label><br><br><br>
+<input type="checkbox" id="volley" class="card-checkbox"><label for="volley" class="card-label"><img src="volley.png" alt="Volley"></label>
+<input type="checkbox" id="luva" class="card-checkbox"><label for="luva" class="card-label"><img src="luva.png" alt="Luva"></label></label><br><br><br><br><br><br>
+<input type="checkbox" id="declaro" class="card-checkbox">
+<label for="declaro" class="card-label1"><img src="declaro.png" alt="Declaro"></label></label><br><br><br><br><br><br><br><br><br><br><br>
+
+<button type="button" class="image-btn"><img src="salvar.png" alt="Save"></button>
+<script>
+document.querySelector('.image-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  alert('Dados Salvos!');
+});
+</script><br><br><br>
+<input type="image" src="matricula.png"  class="matricula"
+       onmouseover="this.src='hmatricula.png';" 
+       onmouseout="this.src='matricula.png';" 
+       alt="Submit"
+	   >
+
+</body>
+</html>

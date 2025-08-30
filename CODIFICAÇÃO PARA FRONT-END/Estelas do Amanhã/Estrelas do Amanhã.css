@@ -1,0 +1,418 @@
+body{
+
+font-family: "Poppins", regular;
+color: #57534E;
+}
+div{
+	
+}
+
+input::placeholder {
+      color: black; /* Change the color */
+      font-size: 42px; /* Change the font size */
+      font-style: arial; /* Change the font style */
+ }
+input[type="text"] {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover or focus: orange */
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px #ff4d00;
+}
+
+/* Filled: placeholder not shown anymore */
+input[type="text"]:not(:placeholder-shown) {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px #ff4d00;
+}
+
+input[type="email"] {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+/* Hover or focus: orange */
+input[type="email"]:hover,
+input[type="email"]:focus {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px #ff4d00;
+}
+/* Filled: placeholder not shown */
+input[type="email"]:not(:placeholder-shown) {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.2);
+}
+
+input[type="number"] {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover or focus */
+input[type="number"]:hover,
+input[type="number"]:focus {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px #ff4d00;
+}
+
+/* Filled (placeholder no longer shown) */
+input[type="number"]:not(:placeholder-shown) {
+  border-color: #ff4d00;
+  box-shadow: 0 0 0 3px #ff4d00;
+}
+
+.normal{
+width: 1200px;
+height: 96px;
+gap: 8;
+angle: 0 deg;
+opacity: 1;
+border-radius: 8px;
+border-width: 2px;
+margin-left: 75px;
+}
+
+/*HOVER EM UPLOAD*/
+input[type="file"] {
+  display: none;
+}
+.upload-label {
+  display: inline-block;
+  width: 1200px;
+  height: 600px;
+  background-image: url("upload-icon.png");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 75px;
+}
+.upload-label:hover {
+  background-image: url("upload-icon-hover.png");
+}
+.tarde:hover {
+  background-image: url("thover.png");
+}
+
+/* CHECKBOX DOS ESPORTES */
+.card-checkbox {
+  display: none; /* hide default checkbox */
+}
+.card-label {
+  display: inline-block;
+  width: 425px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* needed for checkmark positioning */
+  margin-left: 10px;
+}
+
+.card-label img {
+  width: 425px;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* Orange check circle */
+.card-label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff; /* white bg behind icon */
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Check icon (hidden by default) */
+.card-label::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4d00; /* orange */
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  display: none; /* only show when checked */
+}
+
+/* When checked, show orange circle */
+.card-checkbox:checked + .card-label {
+  border-color: #ff4d00;
+}
+
+.card-checkbox:checked + .card-label::after {
+  display: block;
+}
+
+/*RADIO DOS TURNOS*/
+.radio-card {
+  display: none; /* hide default radio */
+}
+
+.radio-label {
+  display: inline-block;
+  width: 350px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* for checkmark positioning */
+  margin-right: 10px;
+  margin-left: 75px;
+}
+
+.radio-label img {
+  width: 350px;
+  display: block;
+  margin: 0 auto 8px;
+
+}
+
+/* Orange check circle placeholder */
+.radio-label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Check icon (hidden by default) */
+.radio-label::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4d00; /* orange */
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  display: none; /* show only when checked */
+}
+
+/* Checked state */
+.radio-card:checked + .radio-label {
+  border-color: #ff4d00;
+}
+
+.radio-card:checked + .radio-label::after {
+  display: block;
+}
+
+/*HOVER DOS DOIS*/
+.card-label:hover,
+.radio-label:hover {
+  border-color: #ff4d00;
+}
+.card-label:hover::after,
+.radio-label:hover::after {
+  display: block; /* show check icon on hover */
+  opacity: 0.4;   /* make it faded so user knows it's just hover */
+}
+/* Date input */
+input[type="date"]:hover,
+input[type="date"]:focus {
+  border-color: #ff4d00;
+  outline: 2px solid #ff4d00;
+}
+
+/* Select dropdown */
+select:hover,
+select:focus {
+  border-color: #ff4d00;
+  outline: 2px solid #ff4d00;
+}
+
+/* Textarea */
+textarea:hover,
+textarea:focus {
+  border-color: #ff4d00;
+  outline: 2px solid #ff4d00;
+}
+/* All these types share the same style */
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+  font-size: 50px;       /* Change text size */
+  color: black;        /* Change text color */
+}
+/* Select box options */
+select,
+select option {
+  font-size: 50px; /* Changes text size inside the dropdown and options */
+}
+
+/* Date input */
+input[type="date"] {
+  font-size: 50px; /* Changes the size of the number text typed in */
+}
+textarea{
+   font-size: 38px;       /* Change text size */
+  color: black;        /* Change text color */
+  border-radius: 15px; /* Adjust this value for more/less rounding */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  margin-left: 75px;
+}
+1
+/*SALVAR 2.0*/
+.image-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 105px;
+}
+
+.image-btn img {
+  display: block;
+  width: 1250px; /* adjust size */
+  height: 250px;
+  margin-left: 105px;
+}
+.card-label1 {
+  display: inline-block;
+  width: 0px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* needed for checkmark positioning */
+}
+
+.card-label1 img {
+  width: 1250px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.image-btn {
+  border: none;         /* remove default button styling */
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.image-btn img {
+  display: block;
+  width: 1250px;         /* adjust as needed */
+  height: 250px;        /* adjust as needed */
+  transition: opacity 0.2s ease; /* optional smooth effect */
+}
+
+.image-btn:hover img {
+  content: url('hsalvar.png'); /* swap image on hover */
+}
+.img{
+	padding-right: 1000px;
+}
+.matricula{
+	width: 800px;
+	height: 150px; 
+}
+
+/*DECLARO*/
+.card-label1 {
+  display: inline-block;
+  width: 1000px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* needed for checkmark positioning */
+  margin-left: 75px;
+}
+
+.card-label1 img {
+  width: 1000px;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* Orange check circle */
+.card-label1::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff; /* white bg behind icon */
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Check icon (hidden by default) */
+.card-label1::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4d00; /* orange */
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  display: none; /* only show when checked */
+}
+
+/* When checked, show orange circle */
+.card-checkbox:checked + .card-label1 {
+  border-color: #ff4d00;
+}
+
+.card-checkbox:checked + .card-label1::after {
+  display: block;
+}
+.img{
+	margin-left: 75px;
+}
+.matricula{
+	margin-left: 100px;
+	height: 250px;
+	width: 1250px;
+}
+.aula{
+	height: 1750px;
+	width: 1450px;
+	position: center;
+	
