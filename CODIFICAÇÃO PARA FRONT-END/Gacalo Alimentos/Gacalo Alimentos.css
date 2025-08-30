@@ -1,0 +1,39 @@
+body{
+	background-image: url("Gacalo Alimentos.jpg");
+	background-size: cover;
+	background-position: center center; 
+	background-repeat: no-repeat;
+}
+h{
+	width:300%
+	color: red;
+}
+span{
+	width: 200%;
+	padding-left: 40%;
+}
+img{
+	height: 325px;
+	width: 370px;
+}
+.img1{
+
+	width: 100%;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 33.33%;
+  padding: px;
+  margin: 70px;
+}
+.a{
+	color: black;
+	padding-left: 11%;
+	transition: background-color 0.3s ease;
+	width: 50%
+}
+.a:hover {
+      background-color: darkblue;
+    }
