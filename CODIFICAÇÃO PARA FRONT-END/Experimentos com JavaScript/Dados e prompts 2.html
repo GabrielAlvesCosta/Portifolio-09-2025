@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UFT-8">
+</head>
+<body>
+<section id="entrada">
+<form action="#" method="get">
+<label for="fnum">Digite um texto: </label>
+<input type="text" name="texto" id="fnom" placeholder="Digite um texto">
+<input type="submit" value="capturar" formaction="javascript:capturar()">
+</form></section>
+<section id="saida">
+<p>Preencha os dados acima e aperte o botao.</p>
+</section>
+<script>
+function capturar() {
+let saida = document.getElementById('saida')
+let nome = document.getElementById('fnom').value
+saida.innerHTML = `${nome}`
+}
+</script></body></html>

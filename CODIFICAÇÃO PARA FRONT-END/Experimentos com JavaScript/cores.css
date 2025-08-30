@@ -1,0 +1,60 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Inter", sans-serif;
+}
+
+body{
+background-color: #ccc;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.grid{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 24px;
+}
+
+.button{
+text-align: center;
+padding: 48px;
+font-size: 32px;
+cursor: pointer;
+}
+
+#yellow{
+background-color: yellow;
+}
+
+#red{
+background-color: red;
+}
+
+#blue{
+background-color: blue;
+}
+
+#white{
+background-color: white;
+}
+
+#gray{
+background-color: gray;
+}
+
+#orange{
+background-color: orange;
+}
+
+
+
+
+
+
+
+
+

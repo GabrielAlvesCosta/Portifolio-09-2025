@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UFT-8">
+</head>
+<body>
+<section id="entrada">
+<form action="#" method="get">
+<label for="fnum">Valor final: </label>
+<input type="number" name="num" id="fnum" placeholder="Apenas poisitivos">
+<input type="submit" value="Contar" formaction="javascript:contagem()">
+</form></section>
+<section id="saida">
+<p>Preencha os dados acima e aperte o botao.</p>
+</section>
+<script>
+function contagem() {
+let saida = document.getElementById('saida')
+let num = Number(document.getElementById('fnum').value)
+saida.innerHTML += `<h2>Contando de 0 até ${num}</h2>`
+let cont = 0
+while (cont <= num) {
+saida.innerHTML += `${cont},`
+cont ++
+}}</script></body></html>

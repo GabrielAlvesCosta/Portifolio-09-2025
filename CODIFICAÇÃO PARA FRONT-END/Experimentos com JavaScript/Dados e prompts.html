@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UFT-8">
+<title>Dados</title>
+</head>
+<body>
+<h1>Via prompt/Alert</h1>
+<button onclick="inicio()">Clique aqui</button>
+<script>
+function inicio() {
+let nome = window.prompt('Qual é o seu nome? ')
+window.alert(`Olá, ${nome}!`)
+}
+</script>
+
+<h1>Via prompt, inserindo na </h1>
+<button onclick="inicio2()">Clique para começar</button>
+<section id="resultado">
+<p>Aqui vai aparecer o resultado... </p>
+</section>
+<script>
+function inicio2() {
+let nome2 = window.prompt('Qual é o seu nome? ')
+let res2 = window.document.getElementById('resultado')
+res2.innerHTML = `<p>Olá, <strong>${nome2}</strong>! É um grande prazer te conhecer! &#x1F596;`
+}
+</script></body></html>
